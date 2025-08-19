@@ -1,0 +1,3 @@
+# Example crontab entry (runs daily at 2 AM)
+30 21 * * * /home/oracle/scripts/rman_backup.sh >> /home/oracle/logs/rman_cron.log 2>&1
+

@@ -1,0 +1,119 @@
+
+Recovery Manager: Release 23.0.0.0.0 - Production on Tue Aug 19 11:24:42 2025
+Version 23.9.0.25.07
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+connected to target database: FREE (DBID=1481564814)
+
+RMAN> run {
+2>   backup as compressed backupset database plus archivelog;
+3>   delete noprompt obsolete;
+4> }
+5> 
+6> 
+
+Starting backup at 19-AUG-25
+current log archived
+using target database control file instead of recovery catalog
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=38 device type=DISK
+channel ORA_DISK_1: starting compressed archived log backup set
+channel ORA_DISK_1: specifying archived log(s) in backup set
+input archived log thread=1 sequence=3 RECID=2 STAMP=1209554178
+input archived log thread=1 sequence=4 RECID=3 STAMP=1209554708
+channel ORA_DISK_1: starting piece 1 at 19-AUG-25
+channel ORA_DISK_1: finished piece 1 at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/0758klol_7_1_1 tag=TAG20250819T112509 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:01
+Finished backup at 19-AUG-25
+
+Starting backup at 19-AUG-25
+using channel ORA_DISK_1
+channel ORA_DISK_1: starting compressed full datafile backup set
+channel ORA_DISK_1: specifying datafile(s) in backup set
+input datafile file number=00001 name=/opt/oracle/oradata/FREE/system01.dbf
+input datafile file number=00003 name=/opt/oracle/oradata/FREE/sysaux01.dbf
+input datafile file number=00011 name=/opt/oracle/oradata/FREE/undotbs01.dbf
+input datafile file number=00007 name=/opt/oracle/oradata/FREE/users01.dbf
+channel ORA_DISK_1: starting piece 1 at 19-AUG-25
+channel ORA_DISK_1: finished piece 1 at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/0878klon_8_1_1 tag=TAG20250819T112511 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:35
+channel ORA_DISK_1: starting compressed full datafile backup set
+channel ORA_DISK_1: specifying datafile(s) in backup set
+input datafile file number=00013 name=/opt/oracle/oradata/FREE/FREEPDB1/sysaux01.dbf
+input datafile file number=00012 name=/opt/oracle/oradata/FREE/FREEPDB1/system01.dbf
+input datafile file number=00014 name=/opt/oracle/oradata/FREE/FREEPDB1/undotbs01.dbf
+input datafile file number=00015 name=/opt/oracle/oradata/FREE/FREEPDB1/users01.dbf
+channel ORA_DISK_1: starting piece 1 at 19-AUG-25
+channel ORA_DISK_1: finished piece 1 at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/09a9klpq_9_1_1 tag=TAG20250819T112511 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:15
+channel ORA_DISK_1: starting compressed full datafile backup set
+channel ORA_DISK_1: specifying datafile(s) in backup set
+input datafile file number=00004 name=/opt/oracle/oradata/FREE/pdbseed/sysaux01.dbf
+input datafile file number=00002 name=/opt/oracle/oradata/FREE/pdbseed/system01.dbf
+input datafile file number=00009 name=/opt/oracle/oradata/FREE/pdbseed/undotbs01.dbf
+channel ORA_DISK_1: starting piece 1 at 19-AUG-25
+channel ORA_DISK_1: finished piece 1 at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/0ap9klq9_10_1_1 tag=TAG20250819T112511 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:15
+Finished backup at 19-AUG-25
+
+Starting backup at 19-AUG-25
+current log archived
+using channel ORA_DISK_1
+channel ORA_DISK_1: starting compressed archived log backup set
+channel ORA_DISK_1: specifying archived log(s) in backup set
+input archived log thread=1 sequence=5 RECID=4 STAMP=1209554777
+channel ORA_DISK_1: starting piece 1 at 19-AUG-25
+channel ORA_DISK_1: finished piece 1 at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/0b9aklqp_11_1_1 tag=TAG20250819T112617 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:01
+Finished backup at 19-AUG-25
+
+Starting Control File and SPFILE Autobackup at 19-AUG-25
+piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/c-1481564814-20250819-01 comment=NONE
+Finished Control File and SPFILE Autobackup at 19-AUG-25
+
+RMAN retention policy will be applied to the command
+RMAN retention policy is set to redundancy 1
+using channel ORA_DISK_1
+Deleting the following obsolete backups and copies:
+Type                 Key    Completion Time    Filename/Handle
+-------------------- ------ ------------------ --------------------
+Backup Set           2      19-AUG-25         
+  Backup Piece       2      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/02rljl6b_2_1_1
+Backup Set           3      19-AUG-25         
+  Backup Piece       3      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/03kmjl74_3_1_1
+Archive Log          2      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/arch1_3_1209508175.dbf
+Backup Set           4      19-AUG-25         
+  Backup Piece       4      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/043njl7j_4_1_1
+Backup Set           5      19-AUG-25         
+  Backup Piece       5      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/05jnjl83_5_1_1
+Archive Log          3      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/arch1_4_1209508175.dbf
+Backup Set           6      19-AUG-25         
+  Backup Piece       6      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/c-1481564814-20250819-00
+Backup Set           7      19-AUG-25         
+  Backup Piece       7      19-AUG-25          /opt/oracle/product/23ai/dbhomeFree/dbs/0758klol_7_1_1
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/02rljl6b_2_1_1 RECID=2 STAMP=1209554123
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/03kmjl74_3_1_1 RECID=3 STAMP=1209554148
+deleted archived log
+archived log file name=/opt/oracle/product/23ai/dbhomeFree/dbs/arch1_3_1209508175.dbf RECID=2 STAMP=1209554178
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/043njl7j_4_1_1 RECID=4 STAMP=1209554163
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/05jnjl83_5_1_1 RECID=5 STAMP=1209554179
+deleted archived log
+archived log file name=/opt/oracle/product/23ai/dbhomeFree/dbs/arch1_4_1209508175.dbf RECID=3 STAMP=1209554708
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/c-1481564814-20250819-00 RECID=6 STAMP=1209554180
+deleted backup piece
+backup piece handle=/opt/oracle/product/23ai/dbhomeFree/dbs/0758klol_7_1_1 RECID=7 STAMP=1209554709
+Deleted 8 objects
+
+
+Recovery Manager complete.
